@@ -1,0 +1,202 @@
+@import './css/reset.css';
+@import './css/type.css';
+@import './css/atoms.css';
+@import './css/join.css';
+@import './css/globe.css';
+@import './css/labs.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Maison Neue', 'Helvetica Neue', 'Arial', sans-serif;
+  background: white;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+#site-header {
+  position: relative;
+  padding: 0.5rem;
+  margin: 0 auto;
+  width: 100%;
+  flex: 0 0 3rem;
+}
+
+#site-header h1 {
+  background: url('./labs-logo.svg') no-repeat center left;
+  background-size: contain;
+  overflow: hidden;
+  height: 0;
+  padding-top: 1.667rem;
+}
+
+main {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  width: 100%;
+  flex: 1 0 auto;
+  pointer-events: none;
+}
+
+main > * {
+  margin: auto;
+  position: relative;
+  pointer-events: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+#cta {
+  margin: 1.16666667em auto;
+}
+
+#cta a {
+  min-width: 10em;
+  text-align: center;
+  margin-bottom: 1em;
+  color: white;
+  position: relative;
+  background: black;
+  user-select: auto;
+  -webkit-user-select: auto;
+}
+
+#cta a span {
+  position: relative;
+}
+
+#cta a .bg-rainbow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+#cta a:hover .bg-rainbow {
+  opacity: 1;
+}
+
+#site-footer {
+  flex: 0 0 2rem;
+  background: black;
+  color: white;
+  line-height: 1;
+  font-size: 0.667em;
+  letter-spacing: 2px;
+  z-index: 2;
+  text-transform: uppercase;
+  font-family: 'Maison Neue Extended', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#site-footer nav {
+  display: flex;
+  padding: 1rem 0.5rem;
+  justify-content: space-between;
+  margin: auto;
+}
+
+#site-footer a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+#site-footer a[href*='labs'] {
+  display: none;
+}
+
+#mission h2 {
+  font-size: 2.5em;
+  max-width: 360px;
+}
+
+#mission * {
+  line-height: 1.1;
+}
+
+@media (min-width: 375px) {
+  #mission h2 {
+    font-size: 3em;
+  }
+}
+@media (min-width: 640px) {
+  main > *,
+  #site-footer nav {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  #site-header {
+    padding: 1.5rem;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+  main {
+    text-align: center;
+  }
+
+  #mission h2 {
+    line-height: 1.2;
+    font-size: 3.5em;
+    position: relative;
+    z-index: 3;
+    max-width: 100%;
+  }
+
+  #mission {
+    max-width: 660px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #mission .mission__placeholder {
+    position: absolute;
+    top: 0;
+    line-height: 1.2;
+    pointer-events: none;
+    animation: fade 4s infinite linear;
+  }
+
+  #site-footer nav {
+    text-align: center;
+  }
+  #site-footer nav > * {
+    flex: 1;
+  }
+
+  #site-footer nav .preview {
+    text-align: left;
+  }
+
+  #site-footer nav > a:last-of-type {
+    text-align: right;
+  }
+
+  #site-footer a[href*='labs'] {
+    display: block;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

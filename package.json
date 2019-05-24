@@ -1,0 +1,30 @@
+{
+  "name": "rip-future",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build src/index.html",
+    "start": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "parcel": {
+    "options": {
+      "autoinstall": false,
+      "cache": false,
+      "sourceMaps": false
+    }
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "dependencies": {
+    "htm": "^2.1.1",
+    "preact": "^8.4.2"
+  }
+}

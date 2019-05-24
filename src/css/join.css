@@ -1,0 +1,17 @@
+#join form {
+  line-height: 1.5;
+}
+
+#join button {
+  margin-top: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#join input {
+  font-size: 1.5em;
+  background: white;
+  margin: 0.25rem auto 1rem auto;
+  display: block;
+  width: 100%;
+}

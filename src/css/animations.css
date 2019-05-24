@@ -1,0 +1,34 @@
+@import './colors';
+
+.bg-rainbow {
+  transition-property: background;
+  background-color: #0288e8;
+  background-color: var(--blue5);
+}
+.rainbow {
+  transition-property: color;
+  color: #0288e8;
+  color: var(--blue5);
+}
+
+[data-color='teal'] .bg-rainbow {
+  background-color: var(--teal5);
+}
+
+[data-color='fuschia'] .bg-rainbow {
+  background-color: var(--fuschia5);
+}
+[data-color='yellow'] .bg-rainbow {
+  background-color: var(--yellow5);
+}
+
+[data-color='teal'] .rainbow {
+  color: var(--teal5);
+}
+
+[data-color='fuschia'] .rainbow {
+  color: var(--fuschia5);
+}
+[data-color='yellow'] .rainbow {
+  color: var(--yellow5);
+}

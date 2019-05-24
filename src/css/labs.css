@@ -1,0 +1,63 @@
+#labs {
+  margin: auto;
+  text-align: left;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 58rem;
+  -webkit-user-select: auto;
+}
+
+#labs::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+#labs h2 {
+  overflow: hidden;
+  height: 0;
+  padding-top: 3rem;
+  background-image: url('../labs-logo.svg');
+  background-size: contain;
+  background-position: left top;
+  background-repeat: no-repeat;
+  margin-bottom: 1rem;
+}
+
+#labs p {
+  font-weight: 400;
+  margin: 1rem auto;
+}
+
+#labs p:first-of-type {
+  font-weight: 500;
+}
+
+[data-theme='labs'] #globe {
+  display: none;
+}
+
+@media (min-width: 64rem) {
+  #labs {
+    display: flex;
+    margin: auto;
+  }
+  #labs header {
+    flex: 0 0 12rem;
+  }
+  #labs section {
+    flex: 1;
+    margin-top: -1.4rem;
+    text-align: justify;
+  }
+}
+
+@media (min-width: 80rem) {
+  [data-theme='labs'] #site-header {
+    position: fixed;
+  }
+  #labs {
+    padding: 1.5rem 0;
+    max-width: 55rem;
+  }
+}

@@ -1,0 +1,42 @@
+.slot-machine {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  line-height: 1.25;
+  text-align: inherit;
+  font-weight: 700;
+  color: black;
+}
+
+.slot-machine--scrolling::before,
+.slot-machine--scrolling::after {
+  content: '';
+  display: block;
+  height: 0.25rem;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.slot-machine--scrolling::before {
+  top: 0;
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.slot-machine--scrolling::after {
+  bottom: 0;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.slot-machine__placeholder {
+  visibility: hidden;
+}
+
+.slot-machine__slots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
